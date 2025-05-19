@@ -2,7 +2,9 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <nav>Nav</nav>
+    <nav>
+      <Navlink to='/'>Events</Navlink>
+    </nav>
   )
 }
 
