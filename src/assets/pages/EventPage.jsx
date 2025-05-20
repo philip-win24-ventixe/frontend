@@ -6,13 +6,8 @@ import EventList from '../components/EventList'
 
 const EventPage = () => {
     return (
-        <div className='Portal-wrapper'>
-            <Nav />
-            <Header />
-            <main>
-                <EventList />
-            </main>
-            <Footer />
+        <div>
+            <EventList />
         </div>
     )
 }

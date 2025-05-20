@@ -3,7 +3,11 @@ import EventList from '../components/EventList'
 
 const EventContext = () => {
   return (
-    <EventList />
+    <div>
+      <EventList />
+    </div>
+
+    
   )
 }
 

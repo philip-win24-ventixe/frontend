@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import EventItem from './EventItem'
 
 const EventList = () => {
 

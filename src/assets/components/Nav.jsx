@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <nav>
-      <Navlink to='/'>Events</Navlink>
+      <NavLink to='/'>Events</NavLink>
     </nav>
   )
 }
