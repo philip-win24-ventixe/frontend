@@ -45,6 +45,7 @@
   --text-muted-color: var(--gray-60);
   --background-color: var(--gray-10);
   --nav-background-color: var(--cool-gray-20);
+  --nav-activ-bar: var(--primary-90);
   --header-background-color: var(--gray-20);
   --main-background-color: var(--gray-20);
   --footer-background-color: var(--gray-20);
@@ -103,6 +104,12 @@ html, body {
   background-color: var(--background-color);
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: default;
+}
+
 .center-wrapper {
   display: flex;
   justify-content: center;
@@ -132,17 +139,22 @@ html, body {
 }
 
 nav {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
   grid-area: nav;
+  gap: .5rem;
   background-color: var(--nav-background-color);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
+  
+  
 }
 
 header {
   grid-area: header;
   background-color: var(--header-background-color);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 main {
@@ -159,3 +171,68 @@ footer {
   padding: 1.5rem;
 }
 
+.logo {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  
+
+  .logo-text{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--headline-color);
+  }
+}
+
+.navlink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--headline-color);
+  height: 60px;
+  gap: 1rem;
+  border: 1px solid transparent;
+  padding: 1rem 1rem 1rem 2rem;
+  cursor: pointer;
+
+  i {
+    font-size: 24px;
+  }
+}
+
+.navlink:hover {
+  color: var(--button-link-hover-text-color);
+}
+
+.navlink::before:hover {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 0;
+  width: 5px;
+  height: 2rem;
+  
+  background-color: var(--nav-activ-bar);
+  border-radius: 0 14px 14px 0;
+}
+
+.active {
+  color: var(--button-link-text-color);
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 0;
+  width: 5px;
+  height: 2rem;
+  
+  background-color: var(--nav-activ-bar);
+  border-radius: 0 14px 14px 0;
+
+}

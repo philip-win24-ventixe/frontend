@@ -26,8 +26,3 @@ function App() {
 }
 
 export default App
-
-{/* <Route path='/' element={<PortalLayout />}>
-          <Route path='/' element={<EventPage />} />
-
-        </Route>    */}

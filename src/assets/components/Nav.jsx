@@ -1,10 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Logo from './Nav/Logo'
 
 const Nav = () => {
   return (
     <nav>
-      <NavLink to='/'>Events</NavLink>
+      <Logo />
+      <NavLink to='/' className="navlink">
+        <i class="fa-solid fa-ticket-perforated"></i>
+        <span>Events</span>
+      </NavLink>
     </nav>
   )
 }
