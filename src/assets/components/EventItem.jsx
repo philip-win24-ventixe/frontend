@@ -5,7 +5,13 @@ const EventItem = ({item}) => {
   return (
     <Link to={`/events/${item.id}`}>
       <div className='event-card'>
-        <div>{item.title}</div>
+        <div className='image-box'></div>
+        <span className='event-card-date'>{item.eventDate}</span>
+        <span className='event-card-title'>{item.title}</span>
+        <span className='event-card-location'>
+          <i className="fa-regular fa-location-dot event-card-pin"></i>
+          {item.location}
+        </span>
       </div>
     </Link>
   )

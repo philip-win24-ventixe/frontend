@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <Logo />
       <NavLink to='/' className="navlink">
-        <i class="fa-solid fa-ticket-perforated"></i>
+        <i className="fa-solid fa-ticket-perforated"></i>
         <span>Events</span>
       </NavLink>
     </nav>

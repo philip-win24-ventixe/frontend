@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useTitle } from '../contexts/TitleContext'
 
 const BookingEventPage = () => {
     const navigate = useNavigate()
     const {id} = useParams()
     const [event, setEvent] = useState({})
+    const { setTitle } = useTitle()
     const [formData, setFormData] = useState({
         eventId: id, 
         firstName: '', 
@@ -61,8 +63,12 @@ const BookingEventPage = () => {
     
 
     useEffect(() => {
+        setTitle('Book Event')
+        document.title = 'Book Event'
         getEvent()
     }, [])
+
+    
 
 
     return (

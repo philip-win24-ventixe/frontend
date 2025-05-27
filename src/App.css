@@ -92,6 +92,12 @@
   --checkbox-checked-background-color: var(--primary-100);
   --checkbox-checked-border-color: var(--primary-100);
   --checkbox-checked-text-color: var(--gray-10);
+  --footer-copyright-text-color: var(--gray-70);
+  --footer-link-color: var(--gray-50);
+  --event-card-background-color: var(--gray-10);
+  --event-card-date-text-color: var(--gray-70);
+  --event-card-location-text-color: var(--gray-80);
+  --event-card-location-pin-color: var(--gray-50);
 }
 
 html, body {
@@ -138,6 +144,13 @@ a {
   }
 }
 
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -154,7 +167,14 @@ header {
   grid-area: header;
   background-color: var(--header-background-color);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
+
+  .headline {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--headline-color);
+    margin: 0;
+  }
 }
 
 main {
@@ -169,6 +189,26 @@ footer {
   background-color: var(--footer-background-color);
   border-radius: 1rem;
   padding: 1.5rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;  
+  }
+
+  .copyright-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--footer-copyright-text-color);
+    margin-right: 1rem;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    color: var(--footer-link-color);
+    cursor: pointer;
+  }
 }
 
 .logo {
@@ -235,4 +275,54 @@ footer {
   background-color: var(--nav-activ-bar);
   border-radius: 0 14px 14px 0;
 
+}
+
+#events {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: .5rem;
+  justify-content: start;
+}
+
+.event-card {
+  width: 270px;
+  background-color: var(--event-card-background-color);
+  border-radius: 1rem;
+  padding: .5rem;
+  display: grid;
+  gap: .5rem;
+  justify-content: center;
+  cursor: pointer;
+
+  .image-box {
+    width: 250px;
+    height: 200px;
+    border-radius: 1rem;
+    background-color: var(--gray-40);
+  }
+
+  .event-card-date {
+    font-size: 11px;
+    color: var(--event-card-date-text-color);
+    padding-left: .5rem;
+  }
+
+  .event-card-title {
+    font-weight: 500;
+    padding-left: .5rem;
+  }
+
+  .event-card-location {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+    font-size: 11px;
+    color: var(--event-card-location-text-color);
+    padding-left: .5rem;
+
+    .event-card-pin {
+      color: var(--event-card-location-pin-color);
+    }
+  }
 }
