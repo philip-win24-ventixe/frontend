@@ -20,7 +20,7 @@
   --secondary-60: #ABB4DD;
   --secondary-30: #D3DAF9;
   --yellow-100: #FFCA39;
-  --yellow-100: #FFEFC3;
+  --yellow-90: #FFEFC3;
   --gray-10: #FFFFFF;
   --gray-20: #F7F7F7;
   --gray-30: #EDEDED;
@@ -41,6 +41,7 @@
   --cool-gray-80: #56565C;
   --cool-gray-90: #39393D;
   --cool-gray-100: #131314;
+  --red-100: red; 
 
   --headline-color: var(--secondary-100);
   --text-color: var(--gray-100);
@@ -100,6 +101,7 @@
   --event-card-date-text-color: var(--gray-70);
   --event-card-location-text-color: var(--gray-80);
   --event-card-location-pin-color: var(--gray-50);
+  --error-color: var(--red-100);
 }
 
 html, body {
@@ -157,6 +159,7 @@ a {
   background-color: var(--button-primary-background-color);
   color: var(--button-primary-text-color);
   border-radius: 30px;
+  border: 1px solid transparent;
   padding: 12px 25px;
   display: flex;
   justify-content: center;
@@ -445,4 +448,71 @@ footer {
     padding: 1rem;
     margin-bottom: 3rem;
   }
+}
+
+.booking-card {
+  display: grid;
+  width: 700px;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  background-color: var(--background-color);
+}
+
+.booking-headline {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 0;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-form-group {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 1rem 0 1rem;
+
+  .booking-label {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: .5rem;
+    color: var(--secondary-100);
+  }
+
+  input {
+    height: 30px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 1rem;
+    padding: .5rem;
+    font-size: 12px;
+    margin-bottom: 1rem;
+
+  }
+
+  .error {
+    position: absolute;
+    font-size: 11px;
+    color: var(--error-color);
+    padding-left: .5rem;
+    top: 46px;
+    right: 30px;
+  }
+
+}
+
+.btn-submit {
+  position: relative;
+  display: flex;
+  margin: 1rem;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
+  left: 180px;
+  margin-bottom: 3rem;
 }
